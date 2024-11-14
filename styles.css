@@ -7,6 +7,7 @@
 
 body {
 	font-family: Arial, sans-serif;
+	font-size: 14px;
 }
 
 .app {
@@ -19,7 +20,7 @@ body {
 #topButtons {
 	display: flex;
 	justify-content: flex-start;
-	padding: 10px;
+	padding: 5px;
 	background-color: white;
 	z-index: 1;
 	position: sticky;
@@ -31,7 +32,7 @@ body {
 #bottomButtons {
 	display: flex;
 	justify-content: center;
-	padding: 10px;
+	padding: 5px;
 	background-color: white;
 	z-index: 1;
 	position: sticky;
@@ -42,7 +43,7 @@ body {
 /* Buttons and text input for top section */
 #textInput,
 button {
-	padding: 8px;
+	padding: 5px;
 	margin-right: 5px;
 }
 
@@ -61,7 +62,7 @@ button {
 /* Style for the Copy button */
 #copyButton {
 	width: 100%;
-	padding: 12px;
+	padding: 5px;
 	background-color: #28a745;
 	color: white;
 	border: none;
@@ -71,15 +72,15 @@ button {
 .checkbox-list {
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
-	margin-top: 10px;
+	padding: 5px;
+	margin-top: 5px;
 }
 
 /* Add padding around each checkbox and its label */
 .checkbox-list div {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	/* Add space between checkboxes */
-	padding: 10px;
+	padding: 5px;
 	/* Padding inside the checkbox container */
 	border: 1px solid #ddd;
 	/* Border around the checkbox container */
@@ -90,6 +91,6 @@ button {
 .checkbox-list label {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 5px;
 	/* Space between checkbox and text */
 }
