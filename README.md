@@ -1,7 +1,3 @@
-Here's an improved version of your README file with clearer instructions and formatting:
-
----
-
 # Copy-Pad
 
 ## Overview
@@ -35,4 +31,4 @@ Once the server is running, open your browser and navigate to `http://localhost:
 - Toggle selection using checkboxes.
 - Copy selected texts with a single click.
 - Save and load text lists from files.
-- Supports keyboard shortcuts (e.g., `Ctrl + C`/`Cmd + C` for copying, `Ctrl + S`/`Cmd + S` for saving).
+- Supports keyboard shortcuts (e.g., `Ctrl+C`/`⌘C` for copying, `Ctrl+S`/`⌘S` for saving).
