@@ -1,0 +1,95 @@
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Style for the container holding the top buttons */
+#topButtons {
+	display: flex;
+	justify-content: flex-start;
+	padding: 10px;
+	background-color: white;
+	z-index: 1;
+	position: sticky;
+	top: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the container holding the bottom Copy button */
+#bottomButtons {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	background-color: white;
+	z-index: 1;
+	position: sticky;
+	bottom: 0;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons and text input for top section */
+#textInput,
+button {
+	padding: 8px;
+	margin-right: 5px;
+}
+
+#textInput {
+	flex-grow: 1;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background-color: #007BFF;
+	color: white;
+	border-radius: 4px;
+}
+
+/* Style for the Copy button */
+#copyButton {
+	width: 100%;
+	padding: 12px;
+	background-color: #28a745;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+}/* Style for checkboxes */
+.checkbox-list {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+/* Add padding around each checkbox and its label */
+.checkbox-list div {
+	margin-bottom: 10px;
+	/* Add space between checkboxes */
+	padding: 10px;
+	/* Padding inside the checkbox container */
+	border: 1px solid #ddd;
+	/* Border around the checkbox container */
+	border-radius: 4px;
+	/* Rounded corners for the checkbox container */
+}
+
+.checkbox-list label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	/* Space between checkbox and text */
+}
