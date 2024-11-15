@@ -1,5 +1,6 @@
 const textInput = document.getElementById('textInput');
 const addButton = document.getElementById('addButton');
+const newButton = document.getElementById('newButton');
 const saveButton = document.getElementById('saveButton');
 const openButton = document.getElementById('openButton');
 const copyButton = document.getElementById('copyButton');
@@ -59,6 +60,10 @@ async function copyToClipboard() {
   } catch (error) {
     console.error('Failed to copy:', error);
   }
+}
+
+function newList() {
+  checkboxList.innerHTML = '';  // Clear the list
 }
 
 // Save list to a text file
@@ -125,6 +130,9 @@ document.addEventListener('keydown', event => {
         openButton.click();  // Trigger file input click
         event.preventDefault();
         break;
+      case 'n':
+        newButton.click();
+        event.preventDefault();
       case 'a': // Cmd+A / Ctrl+A
         selectAllCheckboxes();
         event.preventDefault();
@@ -163,6 +171,7 @@ document.addEventListener('keydown', event => {
 addButton.addEventListener('click', handleAdd);
 copyButton.addEventListener('click', copyToClipboard);
 saveButton.addEventListener('click', saveListToFile);
+newButton.addEventListener('click', newList);
 
 // Open button triggers file input click for loading file
 openButton.addEventListener('click', () => {
