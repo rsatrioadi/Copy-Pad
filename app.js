@@ -28,7 +28,18 @@ function addCheckbox(text = '') {
 	label.appendChild(checkbox);
 	label.appendChild(document.createTextNode(text));
 
+	// Create delete button
+	const deleteButton = document.createElement('button');
+	deleteButton.className = 'delete-button';
+	deleteButton.textContent = '╳';
+
+	// Delete button functionality
+	deleteButton.addEventListener('click', () => {
+		checkboxList.removeChild(checkboxContainer);
+	});
+
 	checkboxContainer.appendChild(label);
+	checkboxContainer.appendChild(deleteButton);
 	checkboxList.appendChild(checkboxContainer);
 }
 
