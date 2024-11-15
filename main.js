@@ -1,5 +1,3 @@
-const { invoke } = window.__TAURI__.core;
-
 const textInput = document.getElementById('textInput');
 const addButton = document.getElementById('addButton');
 const saveButton = document.getElementById('saveButton');

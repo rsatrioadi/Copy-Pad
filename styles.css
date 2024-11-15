@@ -42,7 +42,7 @@ body {
   padding: 5px;
   background-color: white;
   z-index: 1;
-  position: fixed;
+  position: sticky;
   width: 100%;
   bottom: 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -87,6 +87,7 @@ button {
 .checkbox-list {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   margin: 5px;
   margin-top: 0px;
   border: 1px solid #ddd;
