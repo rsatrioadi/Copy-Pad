@@ -1,117 +1,154 @@
 /* Basic reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: Arial, sans-serif;
-	font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
 }
 
 .app {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Style for the container holding the top buttons */
 #topButtons {
-	display: flex;
-	justify-content: flex-start;
-	padding: 5px;
-	background-color: white;
-	z-index: 1;
-	position: sticky;
-	top: 0;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+  background-color: white;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#toolbar {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: white;
 }
 
 /* Style for the container holding the bottom Copy button */
 #bottomButtons {
-	display: flex;
-	justify-content: center;
-	padding: 5px;
-	background-color: white;
-	z-index: 1;
-	position: sticky;
-	bottom: 0;
-	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Buttons and text input for top section */
 #textInput,
 button {
-	padding: 5px;
-	margin-right: 5px;
+  padding: 5px;
+  margin-right: 5px;
 }
 
 #textInput {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 button {
-	cursor: pointer;
-	border: none;
-	background-color: #007BFF;
-	color: white;
-	border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 4px;
+}
+
+#selectAllButton, #deselectAllButton {
+  width: 50%;
+  background-color: dodgerblue;
 }
 
 /* Style for the Copy button */
 #copyButton {
-	width: 100%;
-	padding: 5px;
-	background-color: #28a745;
-	color: white;
-	border: none;
-	cursor: pointer;
-	border-radius: 4px;
-}/* Style for checkboxes */
+  width: 100%;
+  padding: 5px;
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style for checkboxes */
 .checkbox-list {
-	display: flex;
-	flex-direction: column;
-	padding: 5px;
-	margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  margin-top: 0px;
+  border: 1px solid #ddd;
+  /* Border around the checkbox container */
+  border-radius: 4px;
+  /* Rounded corners for the checkbox container */
 }
 
 /* Add padding around each checkbox and its label */
 .checkbox-list div {
-	margin-bottom: 5px;
-	/* Add space between checkboxes */
-	border: 1px solid #ddd;
-	/* Border around the checkbox container */
-	border-radius: 4px;
-	/* Rounded corners for the checkbox container */
-	display: flex;
-	align-items: center;
-	/* Align checkbox and label horizontally */
-	position: relative;
-	/* To position delete button at the far right */
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  /* Align checkbox and label horizontally */
+  position: relative;
+  /* To position delete button at the far right */
 }
 
 /* Make label take up all available space */
 .checkbox-list label {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	padding: 5px;
-	/* Space between checkbox and text */
-	flex-grow: 1;
-	/* Makes label fill the available space */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  /* Space between checkbox and text */
+  flex-grow: 1;
+  /* Makes label fill the available space */
 }
 
 /* Add padding for the delete button */
-.checkbox-list button.delete-button {
-	background-color: #f44336;
-	color: white;
-	border: none;
-	padding: 5px;
-	font-size: 6px;
-	border-radius: 4px;
-	position: absolute;
-	width: 16px;
-	right: 0px;
-	/* Position delete button at the far right */
+.delete-button {
+  position: relative;
+  width: 14px;
+  /* Circle size */
+  height: 14px;
+  border-radius: 50%;
+  /* Makes it a circle */
+  background-color: lightcoral;
+  /* Circle color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button::before,
+.delete-button::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  /* Width of the lines relative to the circle size */
+  height: 1px;
+  /* Thickness of the lines */
+  background-color: white;
+  /* Color of the "X" */
+}
+
+.delete-button::before {
+  transform: rotate(45deg);
+  /* First diagonal line */
+}
+
+.delete-button::after {
+  transform: rotate(-45deg);
+  /* Second diagonal line */
 }

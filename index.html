@@ -2,35 +2,37 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Copy-Pad</title>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy-Pad</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<div class="app">
-		<!-- Top buttons container -->
-		<div id="topButtons">
-			<button id="openButton">Open</button>
-			<button id="saveButton">Save</button>
-			<input type="text" id="textInput" placeholder="Enter text" />
-			<button id="addButton">Add</button>
-			<button id="selectAllButton">Select All</button>
-			<button id="deselectAllButton">Deselect All</button>
-		</div>
+  <div class="app">
+    <!-- Top buttons container -->
+    <div id="topButtons">
+      <button id="openButton">Open</button>
+      <button id="saveButton">Save</button>
+      <input type="text" id="textInput" placeholder="Enter text" />
+      <button id="addButton">Add</button>
+    </div>
+    <div id="toolbar">
+      <button id="selectAllButton">Select All</button>
+      <button id="deselectAllButton">Deselect All</button>
+    </div>
 
-		<!-- Checkboxes will be appended here -->
-		<div id="checkboxList" class="checkbox-list">
-		</div>
+    <!-- Checkboxes will be appended here -->
+    <div id="checkboxList" class="checkbox-list">
+    </div>
 
-		<!-- Bottom buttons container -->
-		<div id="bottomButtons">
-			<button id="copyButton">Copy</button>
-		</div>
-	</div>
+    <!-- Bottom buttons container -->
+    <div id="bottomButtons">
+      <button id="copyButton">Copy</button>
+    </div>
+  </div>
 
-	<script src="app.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
