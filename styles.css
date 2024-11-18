@@ -21,17 +21,19 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 5px;
-  background-color: white;
+  background-color: whitesmoke;
   z-index: 1;
   position: sticky;
+  gap: 4px;
   top: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px lightgrey, inset 0 -1px silver;
 }
 
 #toolbar {
   display: flex;
   justify-content: center;
   padding: 5px;
+  gap: 4px;
   background-color: white;
 }
 
@@ -45,14 +47,14 @@ body {
   position: sticky;
   width: 100%;
   bottom: 0;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 5px lightgrey, inset 0 1px silver;
 }
 
 /* Buttons and text input for top section */
 #textInput,
 button {
   padding: 5px;
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
 
 #textInput {
@@ -90,7 +92,7 @@ button {
   flex-grow: 1;
   margin: 5px;
   margin-top: 0px;
-  border: 1px solid #ddd;
+  border: 1px solid gainsboro;
   /* Border around the checkbox container */
   border-radius: 4px;
   /* Rounded corners for the checkbox container */
@@ -98,7 +100,7 @@ button {
 
 /* Add padding around each checkbox and its label */
 .checkbox-list div {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid gainsboro;
   display: flex;
   align-items: center;
   /* Align checkbox and label horizontally */
@@ -129,6 +131,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 5px;
   min-width: 14px;
   max-width: 14px;
   min-height: 14px;
